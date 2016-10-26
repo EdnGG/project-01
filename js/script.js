@@ -58,6 +58,7 @@ function getRandomQuote(){
 
 var randomNumber = Math.floor(Math.random() * quotes.length);
 var i;
+var pageColor;
 // Creating the loop for the Array
 
     for ( i = 0; i < quotes.length; i+1){
@@ -73,6 +74,10 @@ var i;
     '<span class="citacion">' + printCitation + '</span> <span class="year">' +
     printYear + '</span> <span class ="category">' + printCategory + '</span> </p>';
     
+    pageColor = ["orange","red","purple","yellow","black","blue"];
+    document.body.style.backgroundColor = pageColor [Math.floor(Math.random()* pageColor.length)];
+    //window.setInterval(pageColor, 20000);
+
 return quotes;     
      }
 }
@@ -81,11 +86,11 @@ return quotes;
 
 function printQuote(){
     getRandomQuote();
-    setInterval(getRandomQuote, 20000);
+    window.setInterval(getRandomQuote, 20000);
 
-var pageColor = ["pink","orange","red","purple","yellow","black"];
+/*var pageColor = ["orange","red","purple","yellow","black","blue"];
     document.body.style.backgroundColor = pageColor [Math.floor(Math.random()* pageColor.length)];
-    window.setInterval(pageColor, 20000);
+    window.setInterval(pageColor, 20000);*/
 
 }
 
