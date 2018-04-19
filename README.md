@@ -1,2 +1,2 @@
 # project-01
-Random-Quote-Generator
+For Team Treehouse Techdegree course
